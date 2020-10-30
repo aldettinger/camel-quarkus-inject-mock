@@ -21,7 +21,7 @@ import org.apache.camel.builder.RouteBuilder;
 public class SemesterRoute extends RouteBuilder {
 
     @Override
-    public void configure() throws Exception {
+    public void configure() {
         from("platform-http:/semester").
         choice().
             when(simple("${bean:monthBean} <= 6")).
